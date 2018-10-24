@@ -42,7 +42,7 @@ public class RoshamboApp {
 
 			gameLogic(p);
 
-			String continuePlay = RPSValidator.getStringMatchingChoice(scnr, endGame);
+			String continuePlay = RPSValidator.getEndGameChoice(scnr, endGame);
 			if (continuePlay.equalsIgnoreCase("N")) {
 				keepPlaying = false;
 			}

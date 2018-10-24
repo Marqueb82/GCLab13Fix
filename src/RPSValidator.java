@@ -30,7 +30,7 @@ public class RPSValidator {
 	 * 
 	 * @param scnr
 	 * @param prompt
-	 * @return validated user string input used for player game move and end program
+	 * @return validates user string input used for player
 	 */
 	public static String getStringMatchingChoice(Scanner scnr, String prompt) {
 		boolean isValid = false;
@@ -39,8 +39,7 @@ public class RPSValidator {
 		do {
 			input = scnr.next();
 
-			if (input.equalsIgnoreCase("r") || input.equalsIgnoreCase("p") || input.equalsIgnoreCase("s")
-					|| input.equalsIgnoreCase("y") || input.equals("n")) {
+			if (input.equalsIgnoreCase("r") || input.equalsIgnoreCase("p") || input.equalsIgnoreCase("s")) {
 				isValid = true;
 			} else {
 				System.out.println("Input must match letter.");
@@ -69,6 +68,30 @@ public class RPSValidator {
 				isValid = true;
 			} else {
 				System.out.println("Names only contain letters and should be at least 3 characters long!! :->");
+				isValid = false;
+			}
+
+		} while (!isValid);
+		return input;
+	}
+
+	/**
+	 * 
+	 * @param scnr
+	 * @param prompt
+	 * @return validates string used for end game decision
+	 */
+	public static String getEndGameChoice(Scanner scnr, String prompt) {
+		boolean isValid = false;
+		System.out.println(prompt);
+		String input;
+		do {
+			input = scnr.next();
+
+			if (input.equalsIgnoreCase("y") || input.equals("n")) {
+				isValid = true;
+			} else {
+				System.out.println("Input must match letter.");
 				isValid = false;
 			}
 
