@@ -3,6 +3,12 @@ import java.util.Scanner;
 
 public class RPSValidator {
 
+	/**
+	 * 
+	 * @param scnr
+	 * @param prompt
+	 * @return validated int used for selecting player versus
+	 */
 	public static int getInt(Scanner scnr, String prompt) {
 		System.out.println(prompt);
 		try {
@@ -20,6 +26,12 @@ public class RPSValidator {
 		}
 	}
 
+	/**
+	 * 
+	 * @param scnr
+	 * @param prompt
+	 * @return validated user string input used for player game move and end program
+	 */
 	public static String getStringMatchingChoice(Scanner scnr, String prompt) {
 		boolean isValid = false;
 		System.out.println(prompt);
@@ -39,6 +51,12 @@ public class RPSValidator {
 		return input;
 	}
 
+	/**
+	 * 
+	 * @param scnr
+	 * @param prompt
+	 * @return validated characters used for name input
+	 */
 	public static String getStringMatchingRegex(Scanner scnr, String prompt) {
 		System.out.println(prompt);
 		boolean isValid = false;

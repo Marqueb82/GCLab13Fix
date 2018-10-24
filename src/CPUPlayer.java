@@ -5,6 +5,10 @@ public class CPUPlayer extends Player {
 	public CPUPlayer() {
 	}
 
+	/**
+	 * @see using random value to set cpu player move
+	 * @return selection based on random generated number
+	 */
 	@Override
 	public Roshambo generateRoshambo() {
 		Random rand = new Random();

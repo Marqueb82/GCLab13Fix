@@ -10,6 +10,9 @@ public class HumanPlayer extends Player {
 		this.name = name;
 	}
 
+	/**
+	 * @return user selection based on input
+	 */
 	@Override
 	public Roshambo generateRoshambo() {
 

@@ -11,6 +11,9 @@ public class RoshamboApp {
 	String endGame = "Want to play again?(Y/N)";
 	String enterName = "Hello player, Enter your name: ";
 
+	/**
+	 * @see program runs applicatiion
+	 */
 	public void playRockPaperScissors() {
 		boolean keepPlaying = true;
 		Player p = null;
@@ -52,6 +55,7 @@ public class RoshamboApp {
 
 	/**
 	 * @param p
+	 * @see game logic for win or loss using strings
 	 */
 	private void gameLogic(Player p) {
 		String playerOne = player.generateRoshambo().toString();
